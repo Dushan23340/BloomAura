@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Cream & Sage Flora Palette */
+    --background: 40 33% 98%;
+    --foreground: 220 15% 20%;
+
+    --card: 40 30% 99%;
+    --card-foreground: 220 15% 20%;
+
+    --popover: 40 30% 99%;
+    --popover-foreground: 220 15% 20%;
+
+    /* Sage Green Primary */
+    --primary: 150 25% 45%;
+    --primary-foreground: 40 33% 98%;
+
+    /* Warm Cream Secondary */
+    --secondary: 40 40% 94%;
+    --secondary-foreground: 220 15% 25%;
+
+    --muted: 40 20% 92%;
+    --muted-foreground: 220 10% 50%;
+
+    /* Soft Sage Accent */
+    --accent: 150 30% 90%;
+    --accent-foreground: 150 25% 35%;
+
+    /* Rose Gold for CTAs */
+    --cta: 15 45% 65%;
+    --cta-foreground: 40 33% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 40 33% 98%;
+
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 150 25% 45%;
+
+    --radius: 0.5rem;
+
+    /* Custom Flora Variables */
+    --flora-cream: 40 40% 96%;
+    --flora-sage: 150 25% 45%;
+    --flora-sage-light: 150 30% 92%;
+    --flora-sage-dark: 150 30% 35%;
+    --flora-rose: 15 45% 65%;
+    --flora-rose-light: 15 50% 92%;
+    --flora-charcoal: 220 15% 20%;
+    --flora-warm-gray: 30 10% 60%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(40 40% 98%) 0%, hsl(150 30% 95%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(150 25% 45%) 0%, hsl(150 30% 55%) 100%);
+    --gradient-rose: linear-gradient(135deg, hsl(15 45% 65%) 0%, hsl(15 50% 72%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(220 15% 20% / 0.08);
+    --shadow-card: 0 8px 30px -8px hsl(220 15% 20% / 0.1);
+    --shadow-elevated: 0 20px 50px -15px hsl(220 15% 20% / 0.15);
+
+    --sidebar-background: 40 33% 98%;
+    --sidebar-foreground: 220 15% 20%;
+    --sidebar-primary: 150 25% 45%;
+    --sidebar-primary-foreground: 40 33% 98%;
+    --sidebar-accent: 150 30% 90%;
+    --sidebar-accent-foreground: 150 25% 35%;
+    --sidebar-border: 40 20% 88%;
+    --sidebar-ring: 150 25% 45%;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 40 30% 95%;
+
+    --card: 220 18% 13%;
+    --card-foreground: 40 30% 95%;
+
+    --popover: 220 18% 13%;
+    --popover-foreground: 40 30% 95%;
+
+    --primary: 150 30% 55%;
+    --primary-foreground: 220 20% 10%;
+
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 40 30% 95%;
+
+    --muted: 220 15% 20%;
+    --muted-foreground: 40 20% 65%;
+
+    --accent: 150 20% 20%;
+    --accent-foreground: 150 30% 70%;
+
+    --cta: 15 50% 60%;
+    --cta-foreground: 220 20% 10%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 40 30% 95%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 150 30% 55%;
+
+    --flora-cream: 220 15% 15%;
+    --flora-sage: 150 30% 55%;
+    --flora-sage-light: 150 20% 18%;
+    --flora-sage-dark: 150 30% 65%;
+    --flora-rose: 15 50% 60%;
+    --flora-rose-light: 15 30% 18%;
+    --flora-charcoal: 40 30% 95%;
+    --flora-warm-gray: 30 15% 55%;
+
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 40 30% 95%;
+    --sidebar-primary: 150 30% 55%;
+    --sidebar-primary-foreground: 220 20% 10%;
+    --sidebar-accent: 150 20% 20%;
+    --sidebar-accent-foreground: 150 30% 70%;
+    --sidebar-border: 220 15% 20%;
+    --sidebar-ring: 150 30% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    @apply tracking-tight;
+  }
+}
+
+@layer components {
+  .flora-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .flora-heading-xl {
+    font-family: 'Playfair Display', serif;
+    @apply text-4xl sm:text-5xl lg:text-6xl font-medium leading-tight;
+  }
+
+  .flora-heading-lg {
+    font-family: 'Playfair Display', serif;
+    @apply text-3xl sm:text-4xl font-medium leading-tight;
+  }
+
+  .flora-heading-md {
+    font-family: 'Playfair Display', serif;
+    @apply text-2xl sm:text-3xl font-medium;
+  }
+
+  .flora-body {
+    font-family: 'Inter', sans-serif;
+    @apply text-base leading-relaxed;
+  }
+
+  .flora-body-sm {
+    font-family: 'Inter', sans-serif;
+    @apply text-sm leading-relaxed;
+  }
+
+  .flora-card {
+    @apply bg-card rounded-lg overflow-hidden transition-all duration-300;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .flora-card:hover {
+    box-shadow: var(--shadow-card);
+    @apply -translate-y-1;
+  }
+
+  .flora-btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-medium transition-all duration-300;
+    background: var(--gradient-cta);
+    @apply text-primary-foreground hover:opacity-90 hover:scale-105;
+  }
+
+  .flora-btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-medium transition-all duration-300;
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground;
+  }
+
+  .flora-btn-rose {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-medium transition-all duration-300;
+    background: var(--gradient-rose);
+    @apply text-white hover:opacity-90 hover:scale-105;
+  }
+
+  .flora-section {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .flora-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .flora-shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .flora-shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .flora-shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+}
+
+@layer utilities {
+  .flora-animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .flora-animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .flora-animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
